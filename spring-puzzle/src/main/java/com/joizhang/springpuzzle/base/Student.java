@@ -35,7 +35,7 @@ public class Student extends BaseStudent {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", Student.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", Student.class.getSimpleName() + "{", "}")
                 .add(super.toString())
                 .add("name='" + name + "'")
                 .add("age=" + age)
