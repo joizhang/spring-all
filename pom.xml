@@ -8,19 +8,28 @@
     <packaging>pom</packaging>
 
     <name>spring-all</name>
-    <url>http://maven.apache.org</url>
+    <url>https://github.com/joizhang/spring-all</url>
     <modules>
         <module>spring-puzzle</module>
+        <module>thinking-in-spring</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+
+        <spring.version>5.2.22.RELEASE</spring.version>
         <junit.version>4.13.2</junit.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
