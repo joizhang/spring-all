@@ -6,6 +6,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.env.Environment;
 
+/**
+ * 依赖注入示例
+ */
 public class DependencyInjectionDemo {
 
     public static void main(String[] args) {
