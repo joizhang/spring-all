@@ -23,7 +23,7 @@ public class AnnotationApplicationContextAsIoCContainerDemo {
     }
 
     @Bean
-    public User user() {
+    public User user1() {
         User user = new User();
         user.setId(1L);
         user.setName("小马哥");
