@@ -10,7 +10,7 @@
     <bean class="com.joizhang.springpuzzle.aop.SimpleAopBean" />
 
     <aop:config expose-proxy="true">
-        <aop:advisor advice-ref="simpleMethodInterceptor" pointcut="execution(* com.joizhang.com.joizhang.springpuzzle.aop.SimpleAopBean.*(..))" />
+        <aop:advisor advice-ref="simpleMethodInterceptor" pointcut="execution(* com.joizhang.springpuzzle.aop.SimpleAopBean.*(..))" />
     </aop:config>
 
 </beans>

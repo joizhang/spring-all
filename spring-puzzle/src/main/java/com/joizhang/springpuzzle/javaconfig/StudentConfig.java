@@ -23,7 +23,6 @@ public class StudentConfig implements ImportAware {
         return student;
     }
 
-
     @Override
     public void setImportMetadata(AnnotationMetadata importMetadata) {
         System.out.println("Import aware." + importMetadata.toString());
