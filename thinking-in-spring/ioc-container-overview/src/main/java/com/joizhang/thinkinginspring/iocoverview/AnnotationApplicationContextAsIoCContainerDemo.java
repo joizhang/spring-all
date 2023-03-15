@@ -40,7 +40,7 @@ public class AnnotationApplicationContextAsIoCContainerDemo {
 
     private static void lookupCollectionByType(AbstractApplicationContext applicationContext) {
         Map<String, User> userMap = applicationContext.getBeansOfType(User.class);
-        System.out.println("查找到的所有的 User 集合对象：" + userMap);
+        userMap.forEach((s, user) -> System.out.println("查找到的所有的 User 集合对象：" + user));
     }
 
 }

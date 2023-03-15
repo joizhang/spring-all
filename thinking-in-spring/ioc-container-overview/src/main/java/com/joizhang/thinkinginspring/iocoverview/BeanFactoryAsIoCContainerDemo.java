@@ -23,7 +23,7 @@ public class BeanFactoryAsIoCContainerDemo {
 
     private static void lookupCollectionByType(ListableBeanFactory beanFactory) {
         Map<String, User> userMap = beanFactory.getBeansOfType(User.class);
-        System.out.println("查找到的所有的 User 集合对象：" + userMap);
+        userMap.forEach((s, user) -> System.out.println("查找到的所有的 User 集合对象：" + user));
     }
 
 }

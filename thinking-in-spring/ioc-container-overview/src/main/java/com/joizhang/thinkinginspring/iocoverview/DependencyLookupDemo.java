@@ -16,7 +16,8 @@ public class DependencyLookupDemo {
 
     public static void main(String[] args) {
         // 启动 Spring 应用上下文
-        ListableBeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INF/dependency-lookup-context.xml");
+        ListableBeanFactory beanFactory = new ClassPathXmlApplicationContext(
+                "classpath:/META-INF/dependency-lookup-context.xml");
         // 按照类型查找
         lookupByType(beanFactory);
         // 按照类型查找结合对象

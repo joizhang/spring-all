@@ -13,7 +13,8 @@ public class DependencyInjectionDemo {
 
     public static void main(String[] args) {
         // 启动 Spring 应用上下文
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:/META-INF/dependency-injection-context.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+                "classpath:/META-INF/dependency-injection-context.xml");
         // 依赖来源一：自定义 Bean
         UserRepository userRepository = applicationContext.getBean("userRepository", UserRepository.class);
         // 依赖来源二：依赖注入（內建依赖）
