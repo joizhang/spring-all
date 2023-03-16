@@ -5,7 +5,6 @@ import com.joizhang.thinkinginspring.iocoverview.annotation.Super;
 import java.util.StringJoiner;
 
 /**
- * @author mercyblitz
  */
 @Super
 public class SuperUser extends User {

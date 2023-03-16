@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * @author mercyblitz
  */
 public class User implements BeanNameAware {
 

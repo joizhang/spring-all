@@ -12,7 +12,14 @@
 
     <name>thinking-in-spring</name>
     <modules>
+        <!-- 第三章 Spring IoC容器概述 -->
         <module>ioc-container-overview</module>
+        <!-- 第四章 Spring Bean基础 -->
+        <module>bean-definition</module>
+        <!-- 第六章：Spring IoC依赖注入（Dependency Injection）-->
+        <module>dependency-injection</module>
+        <!-- 第九章：Spring Bean 生命周期 -->
+        <module>bean-lifecycle</module>
     </modules>
 
     <properties>
@@ -20,5 +27,20 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webflux</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>${javax.version}</version>
+        </dependency>
     </dependencies>
 </project>
