@@ -6,8 +6,9 @@
 
     <import resource="classpath:/META-INF/dependency-lookup-context.xml"/>
 
-    <bean class="com.joizhang.thinkinginspring.di.domain.UserHolder">
-        <property name="user" ref="superUser"/>
+    <bean class="com.joizhang.thinkinginspring.di.domain.UserHolder"
+          autowire="constructor">
+        <!--        <property name="user" ref="superUser" /> 替换成 autowiring 模式 -->
     </bean>
 
 </beans>
