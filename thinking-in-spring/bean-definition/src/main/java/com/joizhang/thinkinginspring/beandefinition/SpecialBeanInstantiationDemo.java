@@ -10,9 +10,11 @@ import java.util.ServiceLoader;
 public class SpecialBeanInstantiationDemo {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:META-INF/special-bean-instantiation-context.xml");
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+                "classpath:META-INF/special-bean-instantiation-context.xml");
         AutowireCapableBeanFactory beanFactory = applicationContext.getAutowireCapableBeanFactory();
-        ServiceLoader<UserFactory> serviceLoader = beanFactory.getBean("userFactoryServiceLoader", ServiceLoader.class);
+        ServiceLoader<UserFactory> serviceLoader =
+                beanFactory.getBean("userFactoryServiceLoader", ServiceLoader.class);
         displayServiceLoader(serviceLoader);
 
         // 创建 UserFactory 对象，通过 AutowireCapableBeanFactory

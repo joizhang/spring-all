@@ -10,8 +10,6 @@ import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
-import static org.springframework.beans.factory.support.BeanDefinitionBuilder.genericBeanDefinition;
-
 /**
  * BeanDefinition 注册
  */
@@ -26,21 +24,21 @@ public class AnnotationBeanDefinitionDemo {
 
         // 通过 BeanDefinition 注册 API 实现
         // 1.命名 Bean 的注册方式
-        registerUserBeanDefinition(applicationContext, "mercyblitz-user");
+        registerUserBeanDefinition(applicationContext, "joizhang-user");
         // 2. 非命名 Bean 的注册方法
         registerUserBeanDefinition(applicationContext);
 
         // 启动 Spring 应用上下文
         applicationContext.refresh();
         // 按照类型依赖查找
-        System.out.println("Config 类型的所有 Beans" + applicationContext.getBeansOfType(Config.class));
-        System.out.println("User 类型的所有 Beans" + applicationContext.getBeansOfType(User.class));
+        System.out.println("Config 类型的所有 Beans: " + applicationContext.getBeansOfType(Config.class));
+        System.out.println("User 类型的所有 Beans: " + applicationContext.getBeansOfType(User.class));
         // 显示地关闭 Spring 应用上下文
         applicationContext.close();
     }
 
     public static void registerUserBeanDefinition(BeanDefinitionRegistry registry, String beanName) {
-        BeanDefinitionBuilder beanDefinitionBuilder = genericBeanDefinition(User.class);
+        BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(User.class);
         beanDefinitionBuilder.addPropertyValue("id", 1L).addPropertyValue("name", "小马哥");
         // 判断如果 beanName 参数存在时
         if (StringUtils.hasText(beanName)) {

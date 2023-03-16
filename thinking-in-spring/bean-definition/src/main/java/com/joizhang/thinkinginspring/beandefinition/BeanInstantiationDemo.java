@@ -9,7 +9,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class BeanInstantiationDemo {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:META-INF/bean-instantiation-context.xml");
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+                "classpath:META-INF/bean-instantiation-context.xml");
         User userByStaticMethod = applicationContext.getBean("user-by-static-method", User.class);
         User userByInstanceMethod = applicationContext.getBean("user-by-instance-method", User.class);
         User userByFactoryBean = applicationContext.getBean("user-by-factory-bean", User.class);
