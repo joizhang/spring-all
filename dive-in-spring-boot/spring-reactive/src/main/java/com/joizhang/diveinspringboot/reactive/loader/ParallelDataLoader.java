@@ -10,7 +10,9 @@ import java.util.concurrent.Executors;
  */
 public class ParallelDataLoader extends DataLoader {
 
+    @Override
     protected void doLoad() {
+        // loadConfigurations，loadUsers和loadOrders不存在依赖可以并行
         ExecutorService executorService = Executors.newFixedThreadPool(3); // 创建线程池
         CompletionService<Void> completionService = new ExecutorCompletionService<>(executorService);
         completionService.submit(super::loadConfigurations, null);      //  耗时 >= 1s
