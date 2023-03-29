@@ -35,7 +35,41 @@ ApplicationContext 除了 IoC 容器角色，还有提供：
 
 [dependency-injection](dependency-injection)
 
-- 待更新
+### 依赖注入的模式和类型
+
+| 依赖注入类型    | 配置元数据举例                                          |
+|-----------|--------------------------------------------------|
+| Setter 方法 | <proeprty name=”user” ref=”userBean” />          |
+| 构造器       | <constructor-arg name="user" ref="userBean" />   |
+| 字段        | @Autowired User user;                            |
+| 方法        | @Autowired public void user(User user) { ... }   |
+| 接口回调      | class MyBean implements BeanFactoryAware { ... } |
+
+### Setter 方法注入
+
+- `com.joizhang.thinkinginspring.di.setter.XmlDependencySetterInjectionDemo` 基于 XML 资源的依赖 Setter 方法注入示例。
+- `com.joizhang.thinkinginspring.di.setter.AnnotationDependencySetterInjectionDemo` 基于 Java 注解的依赖 Setter 方法注入示例。
+- `com.joizhang.thinkinginspring.di.setter.ApiDependencySetterInjectionDemo` 基于 API 实现依赖 Setter 方法注入示例。
+- `com.joizhang.thinkinginspring.di.setter.AutoWiringByNameDependencySetterInjectionDemo` "byName" Autowiring 依赖 Setter 方法注入示例。
+
+### 构造器注入
+
+- `com.joizhang.thinkinginspring.di.constructor.XmlDependencyConstructorInjectionDemo` 基于 XML 资源的依赖 Constructor 注入示例。
+- `com.joizhang.thinkinginspring.di.constructor.AnnotationDependencyConstructorInjectionDemo` 基于 Java 注解的依赖 Constructor 方法注入示例。
+- `com.joizhang.thinkinginspring.di.constructor.ApiDependencyConstructorInjectionDemo` 基于 API 实现依赖 Constructor 方法注入示例。
+- `com.joizhang.thinkinginspring.di.constructor.AutoWiringConstructorDependencyConstructorInjectionDemo` "byName" Autowiring 依赖 Constructor 方法注入示例。
+
+### 字段注入
+
+- `com.joizhang.thinkinginspring.di.field.AnnotationDependencyFieldInjectionDemo` 基于 Java 注解的依赖字段注入示例。
+
+### 方法注入
+
+- `com.joizhang.thinkinginspring.di.method.AnnotationDependencyMethodInjectionDemo` 基于 Java 注解的依赖方法注入示例。
+
+### 限定注入
+
+- `com.joizhang.thinkinginspring.di.QualifierAnnotationDependencyInjectionDemo` 限定注入示例。
 
 ## 第九章：Spring Bean 生命周期（88-105）：
 
@@ -49,4 +83,4 @@ ApplicationContext 除了 IoC 容器角色，还有提供：
 
 [bean-lifecycle](bean-lifecycle)
 
-- `` BeanDefinition 合并示例。通过`org.springframework.context.annotation.AnnotatedBeanDefinitionReader`注册bean。
+- 待更新
